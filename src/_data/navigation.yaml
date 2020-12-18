@@ -1,6 +1,6 @@
 ---
 items:
-  - text: Bilder
-    url: "/gallery"
+  - text: Fahrzeuge
+    url: "/fahrzeuge"
   - text: Blog
     url: "/blog"

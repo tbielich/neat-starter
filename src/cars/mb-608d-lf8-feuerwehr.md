@@ -9,11 +9,10 @@ tags:
 # MB 608D LF8 Feuerwehr
 
 <img
-  src="../../fahrzeuge/mb-608d-lf8-feuerwehr/DSCF7356.JPG?nf_resize=fit&w=1000"
+  src="../../images/mb-608d-lf8-feuerwehr/DSCF7356.jpg?nf_resize=fit&w=1000"
   alt="DSCF7356"
 />
-
 <img
-  src="../../fahrzeuge/mb-608d-lf8-feuerwehr/DSCF7356.JPG?nf_resize=fit&w=50"
+  src="../../images/mb-608d-lf8-feuerwehr/DSCF7356.jpg?nf_resize=fit&w=50"
   alt="DSCF7356"
 />
