@@ -15,7 +15,7 @@ permalink: fahrzeuge/{{ fahrzeug.data.title | slug }}/index.html
   {% if fahrzeug.data.title in image %}
     <a href="/{{ image }}">
       <figure>
-        <img src="/{{ image }}" alt="">
+        <img src="/{{ image }}?nf_resize=fit&w=100" alt="" width="100">
         <figcaption>{{ image }}</figcaption>
       </figure>
     </a>
