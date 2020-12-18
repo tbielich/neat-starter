@@ -7,3 +7,5 @@ tags:
   - created
 ---
 Hallo
+
+![](/static/img/2-mb407d-067.jpg)
