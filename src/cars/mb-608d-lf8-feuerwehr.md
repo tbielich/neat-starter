@@ -1,5 +1,5 @@
 ---
-title: MB 608D LF8 Feuerwehr
+title: 002-MB-608D-LF8
 description: MB 608D LF8 Feuerwehr
 author: Thomas Bielich
 date: 2020-12-18T16:51:20.072Z
