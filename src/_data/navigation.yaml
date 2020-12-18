@@ -1,6 +1,6 @@
 ---
 items:
-  - text: Fahrzeuge
-    url: "/fahrzeuge"
+  - text: Sale
+    url: "/sale"
   - text: Blog
     url: "/blog"
