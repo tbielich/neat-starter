@@ -12,8 +12,8 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Fahrzeuge"
-    name: "fahrzeuge"
+  - label: "Sale"
+    name: "sale"
     folder: "src/cars"
     create: true
     editor:
