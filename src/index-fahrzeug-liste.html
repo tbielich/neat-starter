@@ -1,14 +1,16 @@
 ---
 layout: sale
+permalink: fahrzeuge/index.html
 ---
 
 <section class="mt-15">
+  <h2>Fahrezuge</h2>
     {% set carslist = collections.car %}
 
     {% for car in carslist | reverse %}
         <article class="my-8">
             <h2 class="font-bold text-3xl text-gray-900 mb-2">
-                <a href="{{ car.url | url }}">
+                <a href="/fahrzeuge/{{ car.data.title | url }}/">
                     {% if car.data.title %}
                         {{ car.data.title }}
                     {% else %}
@@ -16,6 +18,14 @@ layout: sale
                     {% endif %}
                 </a>
             </h2>
+            {% for image in collections.images %}
+              {% if car.data.title in image %}
+                  <figure>
+                    <img src="/{{ image }}?nf_resize=fit&w=100" alt="" width="100">
+                    <figcaption>{{ image }}</figcaption>
+                  </figure>
+              {% endif %}
+            {% endfor %}
             <p class="text-base leading-6 text-gray-500 mb-3">
                 <time>
                     {{ car.date | readableDate }}
@@ -31,7 +41,7 @@ layout: sale
             {% endif %}
 
             <p>
-                <a href="{{ car.url | url }}" class="text-indigo-500 font-bold text-lg">
+                <a href="/fahrzeuge/{{ car.data.title | url }}/" class="text-indigo-500 font-bold text-lg">
                     Read more →
                 </a>
             </p>
