@@ -12,9 +12,9 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Gallery"
-    name: "gallery"
-    folder: "src/images"
+  - label: "Fahrzeuge"
+    name: "fahrzeuge"
+    folder: "src/sales"
     create: true
     editor:
       preview: false
