@@ -1,8 +1,14 @@
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const fastGlob = require('fast-glob');
+const galleryImages = fastGlob.sync(['images/**/*']);
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection('images', function(collection) {
+    return galleryImages;
+  });
+
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 

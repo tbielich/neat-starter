@@ -1,0 +1,24 @@
+---
+pagination:
+  data: collections.car
+  size: 1
+  alias: fahrzeug
+layout: default
+permalink: fahrzeuge/{{ fahrzeug.data.title | slug }}/index.html
+---
+
+<h1>{{ fahrzeug.data.title }}</h1>
+
+<a href="/">Übersicht</a>
+<div class="gallery">
+  {% for image in collections.images %}
+  {% if fahrzeug.data.title in image %}
+    <a href="/{{ image }}">
+      <figure>
+        <img src="/{{ image }}" alt="">
+        <figcaption>{{ image }}</figcaption>
+      </figure>
+    </a>
+  {% endif %}
+  {% endfor %}
+</div>

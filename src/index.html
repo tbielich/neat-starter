@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Neat Starter
+title: Autoverkäufer
 path: home
 ---
 
@@ -11,6 +11,55 @@ path: home
       {{title}}
     </strong>
   </h1>
+
+  <section class="mt-15">
+    <h2>Fahrezuge</h2>
+      {% set carslist = collections.car %}
+
+      {% for car in carslist | reverse %}
+          <article class="my-8">
+              <h2 class="font-bold text-3xl text-gray-900 mb-2">
+                  <a href="{{ car.url | url }}">
+                      {% if car.data.title %}
+                          {{ car.data.title }}
+                      {% else %}
+                          Untitled
+                      {% endif %}
+                  </a>
+              </h2>
+              {% for image in collections.images %}
+                {% if car.data.title in image %}
+                  <a href="/{{ image }}">
+                    <figure>
+                      <img src="/{{ image }}?nf_resize=fit&w=100" alt="" width="100">
+                      <figcaption>{{ image }}</figcaption>
+                    </figure>
+                  </a>
+                {% endif %}
+              {% endfor %}
+              <p class="text-base leading-6 text-gray-500 mb-3">
+                  <time>
+                      {{ car.date | readableDate }}
+                      by
+                      <a>{{ car.data.author }}</a>
+
+                  </time>
+              </p>
+              {% if car.data.description %}
+                  <p class="text-lg text-gray-500 mb-3">
+                      {{ car.data.description }}
+                  </p>
+              {% endif %}
+
+              <p>
+                  <a href="{{ car.url | url }}" class="text-indigo-500 font-bold text-lg">
+                      Read more →
+                  </a>
+              </p>
+
+          </article>
+      {% endfor %}
+  </section>
 
   <p>
     <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
