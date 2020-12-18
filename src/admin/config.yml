@@ -14,7 +14,7 @@ local_backend: true
 collections:
   - label: "Fahrzeuge"
     name: "fahrzeuge"
-    folder: "src/sales"
+    folder: "src/cars"
     create: true
     editor:
       preview: false
